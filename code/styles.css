@@ -1,0 +1,328 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif; /* Use Inter font as default */
+    background-color: #3F3F3F; /* Set overall background color */
+    color: #ffffff; /* Set default text color to white */
+}
+
+/* Load Inter font */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/inter/v4/RGMXv4w9iCk1XJkzIyGw.ttf') format('truetype'); /* Replace with the correct font URL */
+}
+
+/* CSS for hover effect on the "DISCOVER" button */
+.discover-text {
+    margin-left: 10px;
+    font-weight: 600; /* Set font weight to semi-bold */
+    color: #ffffff; /* Set text color to white */
+    font-size: 40px; /* Set font size to 40px */
+    position: relative; /* Enable positioning for pseudo-element */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.discover-text:hover,
+.discover-text:active {
+    color: red; /* Change text color to red on hover and click */
+}
+
+/* Styling for header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3F3F3F; /* Set header background color */
+    position: relative; /* Ensure relative positioning for pseudo-elements */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Styling for header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3F3F3F; /* Set header background color */
+    position: relative; /* Ensure relative positioning for pseudo-elements */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px; /* Set font size to 40px */
+    color: #ffffff; /* Set text color to white */
+    font-family: 'Inter', sans-serif; /* Use Inter font for h1 */
+    font-weight: 700; /* Set font weight to bold */
+    position: relative; /* Enable positioning for pseudo-element */
+}
+
+/* Styling for the logo in the middle */
+.header__middle .logo {
+    width: 110px; /* Adjust the size as needed */
+    position: relative; /* Enable positioning */
+    top: 0; /* Reset the top positioning */
+    transform: translateY(-10%) translateX(-230%); /* Center the logo vertically and horizontally */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+/* Hover effect for the logo */
+.header__middle .logo:hover {
+    transform: translateY(-10%) translateX(-230%) scale(1.1); /* Scale up the logo on hover */
+}
+
+/* Additional CSS for smooth transition during hover */
+.header__middle .logo {
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth hover effect */
+}
+
+.header__middle .logo:hover {
+    transform: translateY(-10%) translateX(-230%) scale(1.1); /* Scale up the logo on hover */
+}
+
+.logo {
+    width: 90px; /* Adjust the size as needed */
+    position: relative; /* Enable positioning */
+    top: 100%; /* Move the logo down by 70% of its container's height */
+    transform: translateY(20%); /* Center the logo vertically */
+}
+
+/* Positioning for logo in the middle */
+.header__middle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the middle section to grow */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px; /* Set font size to 40px */
+    color: #ffffff; /* Set text color to white */
+    font-family: 'Inter', sans-serif; /* Use Inter font for h1 */
+    font-weight: 700; /* Set font weight to bold */
+    position: relative; /* Enable positioning for pseudo-element */
+}
+
+.logo {
+    width: 90px; /* Adjust the size as needed */
+    position: relative; /* Enable positioning */
+    top: 100%; /* Move the logo down by 70% of its container's height */
+    transform: translateY(20%); /* Center the logo vertically */
+}
+/* Positioning for logo and discover text */
+.header__right {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 170px; /* Adjust as needed */
+    transform: translateY(-50%);
+}
+
+.discover-text {
+    position: absolute;
+    top: 50%;
+    right: 70px; /* Adjust as needed */
+    transform: translateY(-50%);
+}
+
+.discover-text {
+    margin-left: 10px;
+    font-weight: 600; /* Set font weight to semi-bold */
+    color: #ffffff; /* Set text color to white */
+    font-size: 40px; /* Set font size to 40px */
+    position: relative; /* Enable positioning for pseudo-element */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discover-text:hover {
+    transform: translateY(-5px) scale(1.05); /* Move up slightly and scale on hover */
+}
+
+/* Additional CSS for red lines under title and discover text */
+.header h1::after,
+.header .discover-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the position of the line */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: red; /* Color of the line */
+}
+
+/* Styling for content section */
+.content {
+    position: relative;
+    padding: 40px;
+    min-height: 100%; /* Ensure content stretches to at least full height */
+    box-sizing: border-box; /* Include padding in height calculation */
+    background-image: linear-gradient(rgba(63, 63, 63, 0.5), rgba(63, 63, 63, 0.5)), url('https://pngimg.com/d/porsche_PNG10622.png'); /* Add linear-gradient overlay */
+    background-size: cover;
+    overflow: hidden; /* Hide overflow to prevent background image from extending */
+}
+
+.middle-left-content, .middle-content {
+    animation: fadeInUp 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.middle-left-content {
+    position: absolute;
+    top: 33%; /* Adjust the top positioning */
+    left: 10%; /* Adjust horizontal positioning */
+    transform: translateY(-0%);
+    max-width: 300px; /* Adjust max width as needed */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black; /* Set font color to black */
+}
+
+.middle-left-content h2 {
+    margin-bottom: 10px;
+    font-size: 36px; /* Increase font size */
+    font-family: 'Inter', sans-serif; /* Use Inter font for h2 */
+    font-weight: 700; /* Set font weight to bold */
+}
+
+.middle-left-content p {
+    margin: 0;
+    font-size: 20px; /* Adjust font size */
+}
+
+.middle-content {
+    position: absolute;
+    top: 10%; /* Position in the middle vertically */
+    left: 5%; /* Position in the middle horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 600px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Text color */
+}
+
+.middle-content h2 {
+    font-size: 36px; /* Title font size */
+    font-weight: 700; /* Title font weight */
+    margin-bottom: 10px;
+}
+
+.middle-content p {
+    font-size: 20px; /* Text font size */
+}
+
+.box-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Evenly distribute items */
+    padding: 20px;
+}
+
+.box {
+    flex: 1;
+    max-width: 300px; /* Adjust maximum width as needed */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add deeper shadow on hover */
+}
+
+.box__content {
+    display: flex;
+    align-items: center;
+}
+
+.box__image {
+    width: 120px; /* Adjust the size as needed */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.box__text h2 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    color: #333;
+    font-family: 'Inter', sans-serif; /* Use Inter font for h2 */
+    font-weight: 700; /* Set font weight to bold */
+}
+
+.box__text p {
+    margin: 0;
+    font-size: 20px;
+    color: #666;
+}
+
+/* Parallax effect for background text */
+.background-text {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    transition: transform 0.5s ease-in-out;
+}
+
+.background-text:hover {
+    transform: translate(-50%, -55%); /* Slightly shift position on hover */
+    opacity: 0.8;
+}
+
+.background-text h1 {
+    font-size: 300px; /* Increase font size */
+    color: #ffffff; /* White color for text */
+    font-family: 'Inter', sans-serif; /* Use Inter font for text */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    /* Add text shadow to enhance visibility */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adjust shadow values as needed */
+}
+
+.car-image {
+    position: absolute;
+    top: 45%;
+    right: 3%;
+    transform: translateY(-50%);
+}
+
+.car-img {
+    width: 1200px; /* Adjust the size of the car image */
+    border-radius: 5px;
+}
