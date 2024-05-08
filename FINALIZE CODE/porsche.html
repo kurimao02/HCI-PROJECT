@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel="stylesheet" href="porsche.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <!-- Arrow and Back Button -->
+    <div class="back-button">
+        <a href="discover.html"><span class="arrow">&#8592;</span> BACK</a>
+    </div>
+
+    <div class="header">
+        <h1 class="title"> <span class="brand-line"></span>PORSCHE<span class="brand-line"></span> </h1>
+        <div class="header__content">
+            <div class="subtitle">DISCOVER BY <span class="red-text">SPORTS</span></div>
+        </div>
+    </div>
+
+    <a href="home.html">
+        <img src="/FILES/porsche.png" alt="Your Logo" class="adjustable-image">
+    </a>
+
+    <!-- Container for the cart -->
+    <div class="cart-container">
+        <div class="cart-section">
+            <h2>Cart:</h2>
+            <ul class="cart-list"></ul>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button>Buy</button>
+        </div>
+    </div>
+    
+
+    <div class="car-boxes">
+        <div class="car-box">
+            <img src="/FILES/porsche/taycan.png" alt="Car 1">
+            <div class="car-info">
+                <h3>TAYCAN</h3>
+                <p>MSRP $101,765</p>
+                <button onclick="addToCart('TAYCAN', '$101,765')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="car-box">
+            <img src="/FILES/porsche/panamera.png" alt="Car 2">
+            <div class="car-info">
+                <h3>PANAMERA</h3>
+                <p>MSRP $110,295</p>
+                <button onclick="addToCart('PANAMERA', '$110,295')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="car-box">
+            <img src="/FILES/porsche/carrera.png" alt="Car 3">
+            <div class="car-info">
+                <h3>CARRERA</h3>
+                <p>MSRP $177,986</p>
+                <button onclick="addToCart('CARRERA', '$177,986')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="car-box">
+            <img src="/FILES/porsche/718 cayman.png" alt="Car 4">
+            <div class="car-info">
+                <h3>718 Cayman</h3>
+                <p>MSRP $68,139</p>
+                <button onclick="addToCart('718 Cayman', '$68,139')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="car-box">
+            <img src="/FILES/porsche/718 porsche.png" alt="Car 5">
+            <div class="car-info">
+                <h3>PORSCHE 718</h3>
+                <p>MSRP $70,765</p>
+                <button onclick="addToCart('PORSCHE 718', '$70,765')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="car-box">
+            <img src="/FILES/porsche/911 turbo.png" alt="Car 6">
+            <div class="car-info">
+                <h3>911 TURBO</h3>
+                <p>MSRP $198,350</p>
+                <button onclick="addToCart('911 TURBO', '$198,350')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Discover by Brands Subtitle -->
+    <div class="discover-subtitle">
+        <h1 class="title"> <span class="brand-line"></span>PORSCHE<span class="brand-line"></span> </h1>
+        <div class="subtitle">DISCOVER BY <span class="red-text">SPORTS</span></div>
+    </div>
+</body>
+</html>

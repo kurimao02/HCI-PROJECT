@@ -1,0 +1,279 @@
+/* Reset some default styles */
+body, html {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    height: 100%; /* Sets height to 100% of viewport */
+    font-family: 'Inter', sans-serif; /* Sets default font family */
+    background-color: #3F3F3F; /* Sets background color */
+    color: #ffffff; /* Sets text color */
+}
+
+/* Load Inter font */
+@font-face {
+    font-family: 'Inter'; /* Declares font family */
+    font-style: normal; /* Sets font style to normal */
+    font-weight: 400; /* Sets font weight to 400 */
+    src: url('https://fonts.gstatic.com/s/inter/v4/RGMXv4w9iCk1XJkzIyGw.ttf') format('truetype'); /* Sets font source */
+}
+
+/* CSS for hover effect on the "DISCOVER" button */
+.discover-text {
+    margin-left: 10px; /* Adds left margin */
+    font-weight: 600; /* Sets font weight */
+    color: #ffffff; /* Sets text color */
+    font-size: 40px; /* Sets font size */
+    cursor: pointer; /* Sets cursor to pointer */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Adds transition effect */
+}
+
+.discover-text:hover {
+    transform: translateY(-5px) scale(1.05); /* Adds hover effect */
+    color: red; /* Changes text color on hover */
+}
+
+/* Styling for header section */
+.header {
+    display: flex; /* Sets display to flex */
+    justify-content: space-between; /* Aligns items with space between them */
+    align-items: center; /* Vertically centers items */
+    padding: 20px; /* Adds padding */
+    background-color: #3F3F3F; /* Sets background color */
+    position: relative; /* Sets position to relative */
+    transition: background-color 0.3s ease-in-out; /* Adds transition effect */
+}
+
+.header h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 40px; /* Sets font size */
+    color: #ffffff; /* Sets text color */
+    font-family: 'Inter', sans-serif; /* Sets font family */
+    font-weight: 700; /* Sets font weight */
+    position: relative; /* Sets position to relative */
+}
+
+/* Styling for the logo in the middle */
+.header__middle .logo {
+    width: 110px; /* Sets width */
+    position: relative; /* Sets position to relative */
+    top: 0; /* Sets top position */
+    transform: translateY(-10%) translateX(-230%); /* Transforms position */
+    transition: transform 0.3s ease-in-out; /* Adds transition effect */
+}
+
+.header__middle .logo:hover {
+    transform: translateY(-10%) translateX(-230%) scale(1.1); /* Adds hover effect */
+}
+
+.logo {
+    width: 90px; /* Sets width */
+    position: absolute; /* Sets position to absolute */
+    top: 50%; /* Sets top position */
+    left: 170px; /* Sets left position */
+    transform: translateY(-50%); /* Transforms position */
+}
+
+/* Positioning for logo and discover text */
+.header__right {
+    position: relative; /* Sets position to relative */
+}
+
+.discover-text {
+    position: absolute; /* Sets position to absolute */
+    top: 50%; /* Sets top position */
+    right: 70px; /* Sets right position */
+    transform: translateY(-50%); /* Transforms position */
+}
+
+.discover-text {
+    margin-left: 10px; /* Adds left margin */
+    font-weight: 600; /* Sets font weight */
+    color: #ffffff; /* Sets text color */
+    font-size: 40px; /* Sets font size */
+    position: relative; /* Sets position to relative */
+    cursor: pointer; /* Sets cursor to pointer */
+    transition: transform 0.3s ease-in-out; /* Adds transition effect */
+}
+
+.discover-text:hover {
+    transform: translateY(-5px) scale(1.05); /* Adds hover effect */
+}
+
+/* Additional CSS for red lines under title and discover text */
+.header h1::after,
+.header .discover-text::after {
+    content: ''; /* Adds content */
+    position: absolute; /* Sets position to absolute */
+    bottom: -5px; /* Sets bottom position */
+    left: 0; /* Sets left position */
+    width: 100%; /* Sets width */
+    height: 2px; /* Sets height */
+    background-color: red; /* Sets background color */
+}
+
+/* Styling for content section */
+.content {
+    position: relative; /* Sets position to relative */
+    padding: 40px; /* Adds padding */
+    min-height: 100%; /* Sets min height to 100% */
+    box-sizing: border-box; /* Sets box-sizing */
+    background-image: linear-gradient(rgba(63, 63, 63, 0.5), rgba(63, 63, 63, 0.5)), url('https://pngimg.com/d/porsche_PNG10622.png'); /* Sets background image */
+    background-size: cover; /* Sets background size */
+    overflow: hidden; /* Hides overflow */
+}
+
+.middle-content {
+    position: absolute; /* Sets position to absolute */
+    top: 20%; /* Sets top position */
+    left: 25%; /* Sets left position */
+    transform: translate(-50%, -50%); /* Transforms position */
+    text-align: center; /* Sets text alignment */
+    max-width: 600px; /* Sets max width */
+    padding: 20px; /* Adds padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Sets background color */
+    border-radius: 10px; /* Adds border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds box shadow */
+    color: #333; /* Sets text color */
+}
+
+.middle-content h2 {
+    font-size: 36px; /* Sets font size */
+    font-weight: 700; /* Sets font weight */
+    margin-bottom: 10px; /* Adds bottom margin */
+}
+
+.middle-content p {
+    font-size: 20px; /* Sets font size */
+}
+
+.box-container {
+    position: absolute; /* Sets position to absolute */
+    bottom: 0; /* Sets bottom position */
+    left: 0; /* Sets left position */
+    width: 100%; /* Sets width */
+    display: flex; /* Sets display to flex */
+    justify-content: space-around; /* Aligns items with space around them */
+    padding: 20px; /* Adds padding */
+}
+
+.box {
+    flex: 1; /* Sets flex-grow property */
+    max-width: 300px; /* Sets max width */
+    padding: 20px; /* Adds padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Sets background color */
+    border-radius: 10px; /* Adds border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds box shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adds transition effect */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Adds hover effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adds hover effect */
+}
+
+.box__content {
+    display: flex; /* Sets display to flex */
+    align-items: center; /* Vertically centers items */
+}
+
+.box__image {
+    width: 120px; /* Sets width */
+    margin-right: 20px; /* Adds right margin */
+    border-radius: 5px; /* Adds border radius */
+}
+
+.box__text h2 {
+    margin: 0 0 10px 0; /* Sets margin */
+    font-size: 30px; /* Sets font size */
+    color: #333; /* Sets text color */
+    font-family: 'Inter', sans-serif; /* Sets font family */
+    font-weight: 700; /* Sets font weight */
+}
+
+.box__text p {
+    margin: 0; /* Resets margin */
+    font-size: 20px; /* Sets font size */
+    color: #666; /* Sets text color */
+}
+
+/* Parallax effect for background text */
+.background-text {
+    position: fixed; /* Sets position to fixed */
+    top: 40%; /* Sets top position */
+    left: 50%; /* Sets left position */
+    transform: translate(-50%, -50%); /* Transforms position */
+    opacity: 0.5; /* Sets opacity */
+    transition: transform 0.5s ease-in-out; /* Adds transition effect */
+}
+
+.background-text:hover {
+    transform: translate(-50%, -55%); /* Adds hover effect */
+    opacity: 0.8; /* Changes opacity on hover */
+}
+
+.background-text h1 {
+    font-size: 300px; /* Sets font size */
+    color: #ffffff; /* Sets text color */
+    font-family: 'Inter', sans-serif; /* Sets font family */
+    font-weight: bold; /* Sets font weight */
+    text-align: center; /* Sets text alignment */
+    text-transform: uppercase; /* Transforms text to uppercase */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adds text shadow */
+}
+
+.car-image {
+    position: absolute; /* Sets position to absolute */
+    top: 45%; /* Sets top position */
+    right: 3%; /* Sets right position */
+    transform: translateY(-50%); /* Transforms position */
+}
+
+.car-img {
+    width: 1200px; /* Sets width */
+    border-radius: 5px; /* Adds border radius */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .car-img {
+        width: 800px; /* Adjusts width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .car-image {
+        top: 50%; /* Adjusts top position for smaller screens */
+        right: 50%; /* Adjusts right position for smaller screens */
+        transform: translate(50%, -50%); /* Transforms position for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__middle .logo {
+        width: 80px; /* Adjusts width for smaller screens */
+        transform: translateY(-10%) translateX(-180%); /* Transforms position for smaller screens */
+    }
+
+    .header h1 {
+        font-size: 30px; /* Adjusts font size for smaller screens */
+    }
+
+    .discover-text {
+        font-size: 30px; /* Adjusts font size for smaller screens */
+    }
+
+    .box__text h2 {
+        font-size: 24px; /* Adjusts font size for smaller screens */
+    }
+
+    .box__text p {
+        font-size: 16px; /* Adjusts font size for smaller screens */
+    }
+
+    .middle-content h2 {
+        font-size: 30px; /* Adjusts font size for smaller screens */
+    }
+
+    .middle-content p {
+        font-size: 18px; /* Adjusts font size for smaller screens */
+    }
+}

@@ -1,0 +1,203 @@
+/* Reset some default styles */
+body,
+html {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Set height to 100% of viewport */
+    font-family: 'Inter', sans-serif; /* Use Inter font as default */
+    background-color: #3F3F3F; /* Set overall background color */
+    color: #ffffff; /* Set default text color to white */
+}
+
+/* Font face for Inter font */
+@font-face {
+    font-family: 'Inter'; /* Declare font family */
+    font-style: normal; /* Set font style to normal */
+    font-weight: 400; /* Set font weight to 400 */
+    src: url('https://fonts.gstatic.com/s/inter/v4/RGMXv4w9iCk1XJkzIyGw.ttf') format('truetype'); /* Set font source */
+}
+
+/* Styling for header section */
+.header {
+    position: relative; /* Set position to relative */
+    background-color: #3F3F3F; /* Set header background color */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center align text */
+}
+
+.title {
+    margin: 0; /* Remove margin */
+    font-size: 40px; /* Set font size to 40px */
+    color: #ffffff; /* Set text color to white */
+    font-family: 'Inter', sans-serif; /* Use Inter font for h1 */
+    font-weight: 700; /* Set font weight to bold */
+    line-height: 1.2; /* Ensure proper spacing between lines */
+}
+
+/* Styling for subtitle */
+.subtitle {
+    font-size: 24px; /* Set font size to 24px */
+    color: #ffffff; /* Set text color to white */
+}
+
+/* Middle top alignment */
+.header__content {
+    position: absolute; /* Set position to absolute */
+    top: 70px; /* Adjust as needed for vertical alignment */
+    left: 50%; /* Center align horizontally */
+    transform: translateX(-50%); /* Center align horizontally */
+}
+
+/* Styling for content section */
+.content {
+    position: relative; /* Set position to relative */
+    padding: 40px; /* Add padding */
+    min-height: 100%; /* Ensure content stretches to at least full height */
+    box-sizing: border-box; /* Include padding in height calculation */
+    background-image: linear-gradient(rgba(63, 63, 63, 0.5), rgba(63, 63, 63, 0.5)), url('https://pngimg.com/d/porsche_PNG10622.png'); /* Add linear-gradient overlay */
+    background-size: cover; /* Set background size to cover */
+    overflow: hidden; /* Hide overflow to prevent background image from extending */
+}
+
+/* Updated CSS for brand boxes */
+.brands-container {
+    display: flex; /* Use flexbox for horizontal arrangement */
+    justify-content: center; /* Center align items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    position: relative; /* Add relative positioning to enable absolute positioning for the line */
+}
+
+/* Add a white line below brand boxes */
+.brands-container::after {
+    content: ''; /* Add content */
+    position: absolute; /* Set position to absolute */
+    left: 10px; /* Position line at the start of the first box */
+    bottom: -1px; /* Adjust to position the line just below the brand boxes */
+    width: calc(100% - 20px); /* Width of the line based on the total width of the container */
+    height: 2px; /* Height of the line */
+    background-color: #ffffff; /* Color of the line */
+}
+
+.brand-box {
+    width: 250px; /* Set width */
+    height: 97px; /* Set height */
+    margin: 10px; /* Add margin */
+    border: 2px solid #ffffff; /* Set border */
+    border-radius: 15px; /* Add border radius */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Set position to relative */
+    background-color: rgba(255, 255, 255, 0.68); /* Set background color */
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Add hover effect */
+.brand-box:hover {
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+.brand-item {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Ensure image fills the box */
+    height: 100%; /* Ensure image fills the box */
+}
+
+.brand-image {
+    max-width: 100%; /* Ensure image doesn't exceed box width */
+    max-height: 100%; /* Ensure image doesn't exceed box height */
+    border-radius: 10px; /* Add border radius to image */
+}
+
+.brand-title {
+    position: absolute; /* Position title absolute within box */
+    bottom: 0; /* Align title to bottom */
+    width: 100%; /* Ensure title spans the full width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #ffffff; /* Text color */
+    padding: 8px; /* Add padding to title */
+    text-align: center; /* Center align text horizontally */
+    font-family: 'Bebas Neue', sans-serif; /* Use Bebas Neue font for the title */
+    font-weight: 600; /* Set font weight to semi-bold */
+}
+
+/* Line style */
+.brand-line {
+    position: relative; /* Set position to relative */
+    display: inline-block; /* Display as inline block */
+    width: 74px; /* Set width to 74 pixels */
+    height: 50; /* Set height to 0 to make it invisible */
+    border-top: 2px solid #ffffff; /* Set border instead of background-color */
+    vertical-align: middle; /* Align the line vertically with the text */
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+/* Red color for "BRANDS" */
+.red-text {
+    color: red; /* Set text color to red */
+}
+
+/* Bebas Neue font for the title */
+.brand-title {
+    font-family: 'Bebas Neue', sans-serif; /* Use Bebas Neue font for the title */
+    font-weight: 600; /* Set font weight to semi-bold */
+}
+
+.adjustable-image {
+    position: fixed; /* Set position to fixed */
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    width: 100px; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 999; /* Ensure the image is above other content */
+    cursor: pointer; /* Show cursor as pointer for better usability */
+}
+
+/* Your existing CSS styles */
+
+.discover-subtitle {
+    position: fixed; /* Set position to fixed */
+    left: 0; /* Align to left */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Set width to 100% */
+    background-color: #3F3F3F; /* Set background color */
+    color: #ffffff; /* Set text color */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .header__content {
+        top: 50px; /* Adjust header content top position */
+    }
+
+    .title {
+        font-size: 30px; /* Decrease title font size */
+    }
+
+    .subtitle {
+        font-size: 18px; /* Decrease subtitle font size */
+    }
+
+    .content {
+        padding: 20px; /* Adjust content padding */
+    }
+
+    .brand-box {
+        width: calc(50% - 20px); /* Adjust brand box width */
+        margin: 10px; /* Adjust brand box margin */
+    }
+
+    .brand-title {
+        padding: 5px; /* Adjust brand title padding */
+    }
+
+    .brand-line {
+        width: 50px; /* Adjust brand line width */
+    }
+
+    .discover-subtitle {
+        padding: 10px; /* Adjust discover subtitle padding */
+    }
+}
